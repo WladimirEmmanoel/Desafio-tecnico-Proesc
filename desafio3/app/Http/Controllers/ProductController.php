@@ -22,7 +22,16 @@ class ProductController extends Controller
 
    public function listar()
    {
+    $categories = \App\Models\Category::all();
     $produtos = \App\Models\Product::all();
+
+    foreach($produtos as  $produto){
+        foreach($categories as $category){
+            if($produto->category_id === $category->id){
+                $produto->category_name = $category->name;
+            }
+        }
+    }
     return view('produtos', ['produtos' => $produtos] );
    }
 
@@ -34,11 +43,11 @@ class ProductController extends Controller
    public function store(ProductRequest $request)
    {
        $product= $this->objProduct->create([
-           'name'=>$request->name,
+           'name'=> $request->name,
            'slug'=> str_slug($request->name),
            'price'=> $request->price,
            'category_id'=> $request->category_id,
-           'description'=>$request->description
+           'description'=> $request->description
        ]);
        if($product){
            return redirect('produtos/listar');

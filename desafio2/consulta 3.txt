@@ -1,0 +1,3 @@
+UPDATE products
+SET category_ID = 1
+WHERE category_ID = 2

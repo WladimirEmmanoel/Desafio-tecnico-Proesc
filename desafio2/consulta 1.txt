@@ -1,0 +1,4 @@
+SELECT COUNT(P.id) AS Quantidade_de_Produtos, C.name AS Categoria
+FROM categories AS C
+INNER JOIN products AS P ON P.category_id = C.id
+GROUP BY C.name

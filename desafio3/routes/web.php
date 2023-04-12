@@ -1,5 +1,9 @@
 <?php
 
+// use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\CategoryController;
+// use App\Http\Controllers\ProductController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 //produtos
+Route::get('/produtos', 'ProductController@index');
 Route::get('/produtos/listar', 'ProductController@listar');
 Route::get('/produtos/cadastrar', 'ProductController@create');
 Route::post('/produtos/listar', 'ProductController@store');
@@ -23,9 +28,10 @@ Route::put('/produtos/{id}/', 'ProductController@update');
 Route::delete('/produtos/{id}/delete', 'ProductController@destroy');
 
 //categorias
+Route::get('/categorias', 'CategoryController@index');
 Route::get('/categorias/listar', 'CategoryController@listar');
 Route::get('/categorias/cadastrar', 'CategoryController@create');
-Route::get('/categorias/{id}/edit', 'CategoryController@edit');
 Route::post('/categorias/listar', 'CategoryController@store');
+Route::get('/categorias/{id}/edit', 'CategoryController@edit');
 Route::delete('/categorias/{id}/delete', 'CategoryController@destroy');
 

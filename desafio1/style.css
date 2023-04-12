@@ -1,0 +1,93 @@
+/* Reset de Estilos */
+
+/* Reset de Margens e Preenchimentos */
+body, figure, h1, h2, h3, h4, h5, h6, p, blockquote, fieldset, pre, dl, dd, ol, ul, form, legend, figure, table, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+/* Reset de Estilos de Lista */
+ul, ol {
+  list-style: none;
+}
+
+/* Reset de Estilos de Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset de Estilos de Cabeçalhos */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+/* Reset de Estilos de Elementos de Formulário */
+input, textarea, select, button {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* Reset de Estilos de Botões */
+button {
+  cursor: pointer;
+}
+
+/* Reset de Estilos de Imagens */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body{
+  padding: 80px 0;      
+  font-family: sans-serif;
+}
+.content{
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+header{
+  text-align: center;
+  margin-bottom: 80px;
+}
+header .title{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+main{
+  margin-bottom: 100px;
+}
+main .info p:first-child{
+  text-indent: 50px;
+  margin-bottom: 20px;
+}
+main .info p{
+  font-size: 1rem;
+}
+main .info p .destaque{
+  text-transform: uppercase;
+}
+
+footer {
+  text-align: center;
+}
+footer .remetente{
+  text-align: end;
+  margin-bottom: 100px;
+}
+footer .assinatura{
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #000;
+}
+footer p:last-child{
+  font-size: 0.95rem;
+}
